@@ -1,0 +1,6 @@
+<h1>Course List</h1>
+<ul>
+    <li *ngFor="let course of courses" (click)="onCourseClick(course)" [class.selected] ="course === selectedCourse"
+    >{{course.id}} {{course.name}}</li>
+</ul>
+<app-course-details [data] ="selectedCourse" ></app-course-details>
